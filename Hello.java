@@ -14,8 +14,7 @@ class Hello {
 
 
         char c = 'a';
-        c++;
-
+        ch++;
 
         // Print - ln for new line
         System.out.println("Hello World!");
