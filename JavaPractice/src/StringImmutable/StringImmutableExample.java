@@ -6,7 +6,6 @@ public class StringImmutableExample {
 		String anotherName = "Shayan";
 		
 		String otherName = new String("Shayan");
-		String otherName = new String("Shayan");
 		
 		
 		System.out.println("Compare the String is same - " + (name==anotherName) );
