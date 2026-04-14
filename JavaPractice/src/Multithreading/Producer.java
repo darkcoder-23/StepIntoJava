@@ -16,8 +16,8 @@ public class Producer extends Thread {
 			try {
 				Thread.sleep(1000);
 			}catch(Exception e) {}
+			
 			i++;
-
 		}
 		
 		
