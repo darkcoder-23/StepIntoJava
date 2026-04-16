@@ -8,6 +8,7 @@ public class Producer extends Thread {
 		this.c = c;
 	}
 	
+	
 	public void run() {
 		
 		int i = 1;

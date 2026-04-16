@@ -18,13 +18,15 @@ public class ThreadOp {
 		
 		UserThread newThread = new UserThread();
 		newThread.start();
-		
 		System.out.println("Current Running thread is : " + newThread.getName());
 		try {
-			Thread.sleep(1000);
-		}catch(Exception e) {
-			
-		};
+			newThread.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		System.out.println("Programm Ended ...");
 		
 		
