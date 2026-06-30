@@ -75,7 +75,7 @@ public class StreamExample2 {
 		employees.add(new Employee(8,"Rahul",10000,28));
 		employees.add(new Employee(9,"Gupta",8000,28));
 		System.out.println(employees);
-		// Find the sum of all salary of the employee.
+		
 		List<String> empNames = employees.stream().map(Employee::getName).collect(Collectors.toList());
 		System.out.println("Name of Emp - " + empNames);
 		
@@ -84,18 +84,18 @@ public class StreamExample2 {
 		System.out.println("Salary of Emp - " + empSalary);
 		
 		
-		
+		// Find the sum of all salary of the employee.
 		int totalSalary = employees.stream().mapToInt(Employee::getSalary).sum();
 		System.out.println("Total Salary of all Employee = "+totalSalary);
 		
-		// List of employee to group by age and avarage of the salary of that group.
-		
+
 		List<Integer> ageList = employees.stream().map(Employee::getAge).collect(Collectors.toList());
 		System.out.println(ageList);
 		
 		Map<Integer,List<Employee>> empMap = employees.stream().collect(Collectors.groupingBy(x->x.getAge()));
 		System.out.println(empMap);
-		
+
+		// List of employee to group by age and avarage of the salary of that group.		
 		Map<Integer,Double> empAgeAvgSal = employees.stream().collect(Collectors.groupingBy(x->x.getAge(), Collectors.averagingInt(x->x.getSalary())));
 		System.out.println(empAgeAvgSal);
 		
@@ -119,7 +119,6 @@ public class StreamExample2 {
 		System.out.println(emp);
 		
 		// List of employee name and salary whose salary is greater than x.
-		
 		List<Employee> topSalaryEmp = employees.stream().filter(x->x.getSalary() > 5).collect(Collectors.toList());
 		
 		topSalaryEmp.forEach(z->System.out.println(z.getName() + "-->" + z.getSalary()));
