@@ -53,7 +53,6 @@ public class CommonMethodCollection {
 		arr.remove(Integer.valueOf(17));
 		System.out.println("Stack all Value contains in the list => "+arr.containsAll(st));
 		
-		
 		arr.removeAll(st);
 		
 		System.out.println("Stack All Value  is present in the list => " + arr.containsAll(st));
