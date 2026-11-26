@@ -40,6 +40,7 @@ public class BiultInFunction {
 			System.out.println(str);
 			System.out.println(str.length());
 		};
+
 		printStringMulti.accept("Printing Consumer Via Consumer Muliple Line");
 		// Supplier functional Interface
 		Supplier<String> printStr = ()->"I am Printing by Supplier Interface";
